@@ -12,17 +12,11 @@
         <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<nav>
-						@include('commons.menu')
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+	<div class="margintop30">
+		<nav class="menu">
+			@include('commons.menu')
+		</nav>
+	</div>
 	<section>
 		<div class="container">
 			<div class="row">

@@ -25,6 +25,12 @@ nav.menu {
 	width:100%;
 	top:50px;
 	z-index: 99;
+	&.home {
+		position: fixed;
+		& a {
+			color:$white;
+		}
+	}
 	& ul {
 		margin:0px;
 		padding:0px;
@@ -34,8 +40,70 @@ nav.menu {
 			display: inline-block;
 			margin:0px 5px;
 			& a {
-				color: $white;
+				color: $black;
 			}
 		}
 	}
+}
+#hero_img {
+	position: relative;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	& .overlay {
+		@include overlayBlack;
+		z-index: 2;
+	}
+	& .caption {
+		display: table;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 3;
+		& .caption-text {
+			display: table-cell;
+			vertical-align: middle;
+			color: $white;
+			text-align: center;
+			& h1 {
+				font-size: 60px;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			& h3 {
+				text-transform: uppercase;
+				margin-bottom: 10px;
+			}
+			& h2 {
+				font-size: 40px;
+				margin-top: 0px;
+				font-family: 'Lobster';
+			}
+		}
+	}
+}
+.hero {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    display: table;
+    &.siti {
+    	background: url('../img/header_cesco82design.jpg') fixed;
+    }
+    & .overlay {
+		@include overlayBlack;
+		z-index: 2;
+	}
+	& .container {
+    	display: table-cell;
+    	vertical-align: bottom;
+    	padding-bottom:50px;
+	}
+    & h1 {
+    	color: $white;
+    	font-weight: bold;
+	    z-index: 3;
+	    position: relative;
+    }
 }

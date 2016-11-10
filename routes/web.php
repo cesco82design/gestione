@@ -15,7 +15,7 @@
     return view('welcome');
 });*/
 Route::get('/register', array( 'as' => 'register','uses' => 'PagesController@register'));
-Route::post('/',array('as' => 'index','uses' => 'PagesController@index'));
+Route::any('/',array('as' => 'index','uses' => 'PagesController@index'));
 Route::get('/login', function () {
     return view('_layout.login');
 });

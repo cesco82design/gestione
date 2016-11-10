@@ -8,21 +8,29 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
         <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
         <!-- Styles -->
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <nav class="menu">
-                        @include('commons.menu')
-                    </nav>
+        <nav class="menu home">
+            @include('commons.menu')
+        </nav>
+        <header id="hero_img" class="ImgLiquid">
+            <div class="overlay"></div>
+            <div class="caption">
+                <div class="caption-text">
+                    <h2>Man at work</h2>
+                    <h1>My first example on Laravel</h1>
+                    <h3 class="margintop30">I need understand how to publicize</h3>
                 </div>
             </div>
-        </div>
-        <div class="flex-center position-ref full-height">
+            <img src="{{ URL::asset('/assets/img/montain.jpg')}}" alt="img_montain">
+        </header>
+        <!--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
@@ -43,6 +51,11 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
-        </div>
+        </div>-->
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ URL::asset('/assets/js/imgLiquid-min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('/assets/js/script.js')}}"></script>
     </body>
 </html>
