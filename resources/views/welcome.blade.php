@@ -16,9 +16,11 @@
         <!-- Styles -->
     </head>
     <body>
-        <nav class="menu home">
+        @if ( Sentinel::getUser())
+            @include('commons.menu_logged')
+        @else
             @include('commons.menu')
-        </nav>
+        @endif
         <section id="hero_img" class="ImgLiquid">
             <div class="overlay"></div>
             <div class="caption">
