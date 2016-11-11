@@ -19,7 +19,7 @@
         <nav class="menu home">
             @include('commons.menu')
         </nav>
-        <header id="hero_img" class="ImgLiquid">
+        <section id="hero_img" class="ImgLiquid">
             <div class="overlay"></div>
             <div class="caption">
                 <div class="caption-text">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <img src="{{ URL::asset('/assets/img/montain.jpg')}}" alt="img_montain">
-        </header>
+        </section>
         <!--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

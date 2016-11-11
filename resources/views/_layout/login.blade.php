@@ -12,14 +12,8 @@
         <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
 </head>
 <body>
+    @include('commons.menu')
     <div class="container margintop30">
-        <div class="row">
-            <div class="col-xs-12">
-                <nav class="menu">
-                    @include('commons.menu')
-                </nav>
-            </div>
-        </div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 				{{ Form::open(array('class' => 'form-horizontal', 'autocomplete' => 'off','route'=>'index')) }}
