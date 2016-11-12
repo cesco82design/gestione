@@ -27,7 +27,7 @@
                 <div class="caption-text">
                     <h2>Man at work</h2>
                     <h1>My first example on Laravel</h1>
-                    <h3 class="margintop30">I need understand how to publicize</h3>
+                    <h3 class="margintop30">I need understand many things still</h3>
                 </div>
             </div>
             <img src="{{ URL::asset('/assets/img/montain.jpg')}}" alt="img_montain">
