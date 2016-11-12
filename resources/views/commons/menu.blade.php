@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav class="menu{{ Request::is('/') ? ' home' : null }}">
 	<ul>
 		<li{{ Request::is('') ? ' class="active"' : null }}><a href="{{ URL::to('/') }}">Home</a></li>
 		<!--<li{{ Request::is('siti') ? ' class=active' : null }}><a href="{{ url('/siti') }}">Siti</a></li>
@@ -8,6 +8,7 @@
 		<li><a href="{{ URL::to('register') }}">Register</a></li>
 		@else
 		<li><a href="{{ URL::to('login') }}">Login</a></li>
+		<li><a href="{{ URL::to('register') }}">Register</a></li>
 		@endif
 	</ul>
 </nav>

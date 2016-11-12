@@ -21,11 +21,17 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 nav.menu {
-	//position: fixed;
 	width:100%;
 	top:50px;
 	z-index: 99;
-	position: fixed;
+	height:70px;
+	position: relative;
+	&.home {
+		position: fixed;
+		& a {
+			color:$white;
+		}
+	}
 	& ul {
 		margin:0px;
 		padding:0px;
@@ -35,7 +41,7 @@ nav.menu {
 			display: inline-block;
 			margin:0px 5px;
 			& a {
-				color: $white;
+				color: $black;
 			}
 		}
 	}
