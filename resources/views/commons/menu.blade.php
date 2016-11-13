@@ -6,6 +6,8 @@
 		<li{{ Request::is('contact') ? ' class="active"' : null }}><a href="{{ url('/contact') }}">Contatti</a></li>-->
 		@if (Request::is('login'))
 		<li><a href="{{ URL::to('register') }}">Register</a></li>
+		@elseif (Request::is('register'))
+		<li><a href="{{ URL::to('login') }}">Login</a></li>
 		@else
 		<li><a href="{{ URL::to('login') }}">Login</a></li>
 		<li><a href="{{ URL::to('register') }}">Register</a></li>

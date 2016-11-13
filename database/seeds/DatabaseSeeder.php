@@ -9,18 +9,8 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run() 
+    public function run()
     {
-    	DB::table('users')->delete();
-    		DB::table('users')->insert( 
-    			array(
-    				array(
-    					'email' => 'checco.fra@gmail.com',
-    					'password' => 'test',
-    					'permissions' => 'admin',
-    					'first_name' => 'cesco',
-    					'last_name' => 'io',
-    					)
-    				));
+        // $this->call(UsersTableSeeder::class);
     }
 }

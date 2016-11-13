@@ -22,9 +22,10 @@ body {
 }
 nav.menu {
 	width:100%;
-	top:50px;
+	top:0px;
 	z-index: 99;
 	height:70px;
+	line-height:70px;
 	position: relative;
 	&.home {
 		position: fixed;

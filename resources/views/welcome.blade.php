@@ -8,11 +8,11 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-
-        <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/app.css')}}">
         <!-- Styles -->
     </head>
     <body>
@@ -32,28 +32,6 @@
             </div>
             <img src="{{ URL::asset('/assets/img/montain.jpg')}}" alt="img_montain">
         </section>
-        <!--<div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>-->
 
 
 <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>

@@ -11,11 +11,12 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
-Route::get('/register', array( 'as' => 'register','uses' => 'PagesController@register'));
-Route::any('/',array('as' => 'index','uses' => 'PagesController@index'));
-Route::get('/login', function () {
-    return view('_layout.login');
 });
+
+Route::get('/register', 'RegistrationController@register');
+Route::post('/register', 'RegistrationController@postRegister');
+Route::get('/login', 'LoginController@login');
+Route::post('/login', 'LoginController@postlogin');
+//Route::post('/register',array('as'=>'register'),'RegistrationController@postRegister');
