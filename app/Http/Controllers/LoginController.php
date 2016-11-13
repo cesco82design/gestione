@@ -16,9 +16,25 @@ class LoginController extends Controller
     {
         Sentinel::authenticate($request->all());
 
-        return Sentinel::check();
-        
+        if (! Sentinel::check()) {
+            return redirect()->guest('/');
+        }
+
+        //return $next($request);
+        //return Sentinel::check();
+        return redirect('/');
+        /*
+        if (( Sentinel::check() ) =='true') {
+            redirect('/');
+        }
+        else {
+            redirect('/badlogin');
+        }
+
+        //return redirect('/');
+
         //dd($request->all());
+        */
     }
 
 }

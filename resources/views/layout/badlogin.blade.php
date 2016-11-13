@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registered</title>
+        <title>Bad Login</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 full-height flex-center position-ref">
-					<h1>sei Registrato</h1>
+					<h1>Le credenziali inserite sono errate</h1>
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 		@if (Request::is('login'))
 		<li><a href="{{ URL::to('register') }}">Register</a></li>
 		@else
-		<li><a href="{{ URL::to('login') }}">Login</a></li>
+		<li><a href="{{ URL::to('logout') }}">Logout</a></li>
 		@endif
 	</ul>
 </nav>
