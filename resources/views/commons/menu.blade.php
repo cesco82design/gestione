@@ -34,7 +34,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li{{ Request::is('') ? ' class="active"' : null }}><a href="{{ URL::to('/') }}">Home</a></li>
-        <li{{ Request::is('siti') ? ' class=active' : null }}><a href="{{ url('/siti') }}">Siti</a></li>
+        <li class=" {{ Request::is('siti') ? ' active' : null }}"><a href="{{ url('/siti') }}">Siti</a></li>
       	<li class="divider-vertical"></li>
         @if (Request::is('login'))
 		<li><a href="{{ URL::to('register') }}">Register</a></li>

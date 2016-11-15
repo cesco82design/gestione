@@ -37,10 +37,16 @@
 					<label><i class="fa fa-envelope"></i> Email</label>
 					<p>{{ Sentinel::getUser()->email }}</p>
 				</div>
+				<div class="col-xs-6 margintop30">
+					<label><i class="fa fa-lock"></i> Last Login</label>
+					<p>{{ Sentinel::getUser()->last_login }}</p>
+				</div>
 				<div class="col-xs-6"></div>
 				<div class="col-xs-6"></div>
 			</div>
 		</div>
 	</section>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ URL::asset('/assets/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

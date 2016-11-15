@@ -18,7 +18,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li{{ Request::is('') ? ' class="active"' : null }}><a href="{{ URL::to('/') }}">Home</a></li>
-        <li{{ Request::is('siti') ? ' class=active' : null }}><a href="{{ url('/siti') }}">Siti</a></li>
+        <li class="dropdown {{ Request::is('siti') ? ' active' : null }}">
+        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Siti</a>
+        	<ul class="dropdown-menu">
+	            <li class="dropdown-item"><a href="{{ URL::to('/add_site') }}">Add Site</a></li>
+	            <li class="dropdown-item"><a href="{{ URL::to('/siti') }}">All Sites</a></li>
+          </ul>
+		</li>
       	<li class="divider-vertical"></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Sentinel::getUser()->name() }} <span class="caret"></span></a>

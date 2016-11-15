@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row margintop30">
                 <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                    {{ Form::open(array('class' => 'form-horizontal', 'autocomplete' => 'off', 'url'=>'/register')) }}
+                    {{ Form::open(array('class' => 'form-horizontal','id' =>'RegisterUser', 'autocomplete' => 'off', 'url'=>'/register')) }}
                     
                     {{ csrf_field() }}
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : null }}">
@@ -75,7 +75,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                {{ Form::password('password', array('class' => 'form-control','placeholder' => 'Password','required' => 'required')) }}
+                                {{ Form::password('password', array('class' => 'form-control','id'=>'pwd','placeholder' => 'Password','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('password') }}</p>
                         </div>
@@ -105,5 +105,23 @@
             </div>
         </div>
     </section>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+<script>
+// just for the demos, avoids form submit
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#RegisterUser" ).validate({
+  rules: {
+    password: "required",
+    password_confirmation: {
+      equalTo: "#pwd"
+    }
+  }
+});
+</script>
 </body>
 </html>
