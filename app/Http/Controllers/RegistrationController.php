@@ -16,6 +16,13 @@ class RegistrationController extends Controller
     {
     	$user = Sentinel::registerAndActivate( $request->all() );
     	//dd($user);
-    	return redirect('/');
+        $parameters = [];
+        $parameters['password']=$request->password;
+        $parameters['password_confirmation']=$request->password_confirmation;
+        if ($parameters['password'] != $parameters['password_confirmation']) {
+            return redirect('/badlogin')->withErrors('le password non sono uguali');
+        } else {
+            return redirect('/');
+        }
     }
 }

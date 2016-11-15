@@ -19,6 +19,8 @@ Route::get('/register', 'RegistrationController@register');
 Route::post('/register', 'RegistrationController@postRegister');
 Route::get('/login', 'LoginController@login');
 Route::post('/login', 'LoginController@postlogin');
+Route::get('/logout', 'LoginController@logout');
+Route::get('/profile', 'PageController@profile');
 Route::any('/badlogin', function() {
 	return view('layout.badlogin');
 });

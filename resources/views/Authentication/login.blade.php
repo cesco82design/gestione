@@ -14,7 +14,7 @@
 </head>
 <body>
     @include('commons.menu')
-    <div class="container margintop30">
+    <section class="container margintop30 first_section">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 				{{ Form::open(array('class' => 'form-horizontal', 'autocomplete' => 'off','url' => '/login')) }}
@@ -35,7 +35,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                {{ Form::password('password', null, array('class' => 'form-control','placeholder' => 'Password','required' => 'required')) }}
+                                {{ Form::password('password',  array('class' => 'form-control','placeholder' => 'Password','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('password') }}</p>
                         </div>
@@ -66,6 +66,6 @@
 				{{ Form::close() }}
 			</div>
 		</div>
-	</div>
+	</section>
 </body>
 </html>

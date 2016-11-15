@@ -14,7 +14,7 @@
 </head>
 <body>
     @include('commons.menu')
-    <section>
+    <section class="first_section">
         <div class="container">
             <div class="row margintop30">
                 <div class="col-xs-12 col-sm-4 col-sm-offset-4">
@@ -65,7 +65,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                {{ Form::email('email', null, array('class' => 'form-control','placeholder' => 'example@domain.ext')) }}
+                                {{ Form::email('email', null, array('class' => 'form-control','placeholder' => 'example@domain.ext','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('email') }}</p>
                         </div>
@@ -75,7 +75,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                {{ Form::password('password', null, array('class' => 'form-control','placeholder' => 'Password')) }}
+                                {{ Form::password('password', array('class' => 'form-control','placeholder' => 'Password','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('password') }}</p>
                         </div>
@@ -85,7 +85,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                {{ Form::password('password_confirmation', null, array('class' => 'form-control','placeholder' => 'Password')) }}
+                                {{ Form::password('password_confirmation', array('class' => 'form-control','placeholder' => 'Confirm Password','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('password_confirmation') }}</p>
                         </div>
