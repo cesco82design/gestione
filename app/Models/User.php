@@ -8,9 +8,28 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser {
     /*
  	 * Info
  	 */
+    protected $table = 'users';
 
     public function name() {
         return $this->first_name . ' ' . $this->last_name;
+    }
+    static public function allUsers()
+    {   
+
+        $utenti = DB::table('users')->get();
+        //print_r($utenti);
+        //echo $utenti['email'];
+        $loop='';
+        foreach ($utenti as $utente) {
+            $loop.= $utente->email;
+            $loop.= '<br>';
+            $loop.= $utente->username;
+            $loop.= '<br>';
+
+        }
+        
+        return $loop;
+        //return view('users.index');
     }
 
 

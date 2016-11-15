@@ -24,7 +24,8 @@
 	            <li class="dropdown-item"><a href="{{ URL::to('/add_site') }}">Add Site</a></li>
 	            <li class="dropdown-item"><a href="{{ URL::to('/siti') }}">All Sites</a></li>
           </ul>
-		</li>
+		    </li>
+        <li{{ Request::is('') ? ' class="active"' : null }}><a href="{{ URL::to('/utenti') }}">Utenti</a></li>
       	<li class="divider-vertical"></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Sentinel::getUser()->name() }} <span class="caret"></span></a>
