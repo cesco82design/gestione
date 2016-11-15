@@ -22,6 +22,11 @@ class PageController extends Controller
         return view('users.index');
     }
 
+    public function sites() 
+    {
+        return view('layouts.siti');
+    }
+
     public function addSites() 
     {
     	return view('sites.add_site');
