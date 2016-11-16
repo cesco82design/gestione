@@ -5,6 +5,8 @@
 @stop
 
 @section('content')
-	<div class="test">ciao</div>
+	@foreach ($utenti as $utente)
+	    <p>This is user {{ $utente->id }}</p>
+	@endforeach
 	
 @stop

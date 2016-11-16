@@ -19,17 +19,8 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser {
         $utenti = DB::table('users')->get();
         //print_r($utenti);
         //echo $utenti['email'];
-        $loop='';
-        foreach ($utenti as $utente) {
-            $loop.= $utente->email;
-            $loop.= '<br>';
-            $loop.= $utente->username;
-            $loop.= '<br>';
-
-        }
         
-        return $loop;
-        //return view('users.index');
+        return view('users.index', array('utenti'=>$utenti));
     }
 
 
