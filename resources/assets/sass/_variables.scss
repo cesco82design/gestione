@@ -131,7 +131,7 @@ input.valid {
     box-shadow: inset 0 1px 1px rgba($black,.075),0 0 8px rgba($success,.6);
 }
 input.error {
-    border-color: $red;
+    border-color: $red !important;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba($black,.075),0 0 8px rgba($red,.6);
     box-shadow: inset 0 1px 1px rgba($black,.075),0 0 8px rgba($red,.6);

@@ -85,7 +85,7 @@
                         <div class="col-xs-12">
                             <div class="input-group"> 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                {{ Form::password('password_confirmation', array('class' => 'form-control','placeholder' => 'Confirm Password','required' => 'required')) }}
+                                {{ Form::password('password_confirmation', array('class' => 'form-control','id'=>'password_confirmation','placeholder' => 'Confirm Password','required' => 'required')) }}
                             </div>
                             <p class="help-block">{{ $errors->first('password_confirmation') }}</p>
                         </div>
@@ -105,23 +105,29 @@
             </div>
         </div>
     </section>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="{{ URL::asset('/assets/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('/assets/js/imgLiquid-min.js')}}"></script>
+<script type="text/javascript" src="{{ URL::asset('/assets/js/script.js')}}"></script>
 <script>
-// just for the demos, avoids form submit
-jQuery.validator.setDefaults({
-  debug: true,
-  success: "valid"
-});
-$( "#RegisterUser" ).validate({
-  rules: {
-    password: "required",
-    password_confirmation: {
-      equalTo: "#pwd"
-    }
+
+var password = document.getElementById("pwd")
+  , confirm_password = document.getElementById("password_confirmation");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Le password non corrispondono");
+    confirm_password.classList.add("error");
+    password.classList.add("error");
+  } else {
+    confirm_password.setCustomValidity('');
   }
-});
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
 </script>
 </body>
 </html>
